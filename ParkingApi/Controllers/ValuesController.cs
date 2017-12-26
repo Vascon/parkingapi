@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -49,8 +45,7 @@ namespace ParkingApi.Controllers
                 }
             }
 
-
-            if (min >= 0.001)
+            if (min >= 0.002)
                 return ("Парковки рядом с вашим автомобилем не найдены");
             return (JsonConvert.SerializeObject(place));
         }
